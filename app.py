@@ -49,6 +49,7 @@ def biaodan():
 def result():
     if request.method == 'POST':
         result = request.form      ##如果请求是post那么就将请求的form内容形成字典传给result，
+        print('----')
         return render_template('test/result.html',result=result)
 
 
