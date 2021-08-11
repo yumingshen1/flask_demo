@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结果</title>
+</head>
+<body>
+
+    <table border="1">    <!--字典类型，  table创建表格，border=1可显示表格-->
+            {% for key,value in result.items() %} <!--将字典的key和value取出，items()表示将字典转换为列表循环拿取[(key,value),(key,vlaue)]-->
+            <tr>
+                <th>{{ key }}</th>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+</body>
+</html>

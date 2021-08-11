@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+    今天是{{ var }},欢迎观临.<br/>   <!--渲染数据，普通变量-->
+
+    今天ll滚吧：<br/>                <!---列表类型-->
+    {% for i in n %}              <!--定义的变量循环输出，for循环没有冒号，以endfor结束循环-->
+        <li>{{ i }}</li>          <!--用<li>标签可以将循环数据换行打印-->
+    {% endfor %}
+        <br/>
+
+    任务:<br/>
+        <table border="1">    <!--字典类型，  table创建表格，border=1可显示表格-->
+            {% for key,value in book.items() %} <!--将字典的key和value取出，items()表示将字典转换为列表循环拿取[(key,value),(key,vlaue)]-->
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
